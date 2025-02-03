@@ -219,11 +219,12 @@ body {
         margin-right: -10px; 
        
     }
-    .menu li {
-        padding: 22px;        
+  .menu li {
+        padding: 10px; 
+        padding-bottom: 40px;       
     }
     .menu li a{
-        padding: 5px;        
+        padding: 10px;        
     }
     .open-menu, .close-menu {
         display: block;
