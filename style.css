@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #212529;    
+    --color1:#fff;
+    --color2:#181818;  
+    --color01:#212529;
+    --color02:#343a40;
+    --colortext:#dee2e6;  
+    --colortitlle:#f8f9fa;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    background-color: var(--color01);
+    padding: 12px 20px ;
+   
+}
+
+.logo img {
+    position: relative;
+    display: flex;
+    width: 35px;
+    margin: auto;
+}
+
+.logo img:hover{
+   transform:translateY(-10%);
+   transition: 0.5s ease-in-out;
+}
+
+
+.menu {    
+    display: flex;
+    margin-right: 60px;
+}
+.menu li{
+    text-align: center;
+    align-items: center;
+    padding-left: 50px;
+    
+  
+}
+.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--colortext);
+    text-align: center;
+    transition: 0.15s ease-in;
+    position: relative;    
+}
+.menu li a:hover{
+    color: var(--colortitlle);
+    cursor: pointer;
+    
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var();
+    transition: 0.15s ease-in-out;
+   
+}
+.menu li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var();
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after{width: 100%;}
+.open-menu, .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.text-principal {
+    background-image: url(./bg-color1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.text-principal {
+    display: flex;
+    color: var(--color1);    
+}
+
+.text-apresentacao {
+    display: block;
+   text-align: center;
+   align-items: center;
+   margin: 15% 0px 0px 24%;
+   line-height: 1;
+}
+
+.text-apresentacao h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.text-apresentacao h1{
+    font-size: 70px;
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+.text-apresentacao p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.text-apresentacao button{
+    cursor: pointer;
+    padding: 15px 20px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    background-color:#06d6a0;
+}
+
+.text-apresentacao  .contate-nos{
+ padding: 15px 46px;
+}
+
+.text-apresentacao .contate-nos:hover, .apoie:hover{
+    cursor: pointer;
+    background-color:#005f73 ;
+}
+
+
+
+.text-apresentacao button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color1);
+}
+@media only screen and (max-width: 576px) {
+  
+         .text-apresentacao button {
+            padding: 10px 20px;
+           
+         }
+         .text-apresentacao .contate-nos {
+            padding: 10px 46px;
+           
+         }
+         
+   }
+
+@media only screen and (max-width: 768px) {
+  
+     .text-principal h2 {
+        font-size: 30px;
+     }
+     .text-principal h1 {
+        font-size: 58px;
+     }
+    
+     .text-apresentacao .contate-nos{
+        margin-top: 15px;
+        
+    }
+    .text-apresentacao .apoie {
+        margin-top: 15px;
+        
+    }
+}
+
+@media(max-width: 992px) {
+   
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+        margin-right: -10px; 
+       
+    }
+    .menu li {
+        padding: 22px;        
+    }
+    .menu li a{
+        padding: 5px;        
+    }
+    .open-menu, .close-menu {
+        display: block;
+    }
+    #check:checked ~.menu {
+        right: 0;
+    }
+     
+    .text-apresentacao {   
+       margin: auto; 
+       margin-top: 150px;
+    }
+    
+    .text-apresentacao p{   
+        font-size: 15px;
+        font-weight: 300;
+     } 
+    
+   
+}
